@@ -17,13 +17,24 @@ fetchProducts();
 function renderProducts(products){
     div.innerHTML = "";
     for(let product of products){
-        div.innerHTML += `
-            <div class="card" data-id=${product.id}>
-            <img src="${product.image}" alt="" width="100px" height="100px">
-            <span>${product.name}</span>
-            <span>${product.price}</span>
-            <button>Delete</button>
-            </div>`
+        if(product.id === 6){
+            div.innerHTML += `
+                <div class="card" data-id=${product.id}>
+                <img src="${product.image}" alt="" width="100px" height="100px">
+                <span>${product.name}</span>
+                <span>${product.price}</span>
+                <button>Delete</button>
+                </div>`
+            document.querySelector(".send").setAttribute("disabled", true);
+        }else {
+            div.innerHTML += `
+                <div class="card" data-id=${product.id}>
+                <img src="${product.image}" alt="" width="100px" height="100px">
+                <span>${product.name}</span>
+                <span>${product.price}</span>
+                <button>Delete</button>
+                </div>`
+        }
     }
 }
 
@@ -46,6 +57,7 @@ document.querySelector("form").addEventListener("submit", async () => {
     let response = await createProduct.json();
     renderProducts(response);
 })
+
 
 // Delete product
 div.addEventListener("click", async(e) => {
