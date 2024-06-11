@@ -1,40 +1,4 @@
 {
   "products": [
-    {
-      "name": "Carlitos Way",
-      "price": "123",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
-      "id": 1
-    },
-    {
-      "name": "Carlitos Way",
-      "price": "123",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
-      "id": 2
-    },
-    {
-      "name": "Carlitos Way",
-      "price": "123",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
-      "id": 3
-    },
-    {
-      "name": "Carlitos Way",
-      "price": "123",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
-      "id": 4
-    },
-    {
-      "name": "Carlitos Way",
-      "price": "123",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
-      "id": 5
-    },
-    {
-      "name": "Carlitos Way",
-      "price": "123",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
-      "id": 6
-    }
   ]
 }

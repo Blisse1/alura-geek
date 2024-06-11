@@ -1,4 +1,5 @@
 let div = document.querySelector(".products");
+fetchProducts();
 
 // Fetch the products
 async function fetchProducts(){
@@ -7,37 +8,31 @@ async function fetchProducts(){
     if(products.length === 0){
         div.innerHTML = "";
         div.innerHTML += `<p>Parece que no hay productos disponibles. Considera agregar alguno.</p>`;
-    }else {
+    }else if(products.length === 6){
         renderProducts(products);
+        document.querySelector(".send").setAttribute("disabled", true);
+        document.querySelector(".send").setAttribute("class", "bc-red");
+        let para = document.createElement("p");
+        para.innerHTML = "Has llegado al límite de productos, considera eliminar y refrescar"
+        document.querySelector(".form-container").appendChild(para);
+    }else if(products.length < 6){
+        renderProducts(products);
+        document.querySelector(".send").removeAttribute("disabled");
     }
+
 }
-fetchProducts();
 
 // Renders the products on screen
 function renderProducts(products){
     div.innerHTML = "";
     for(let product of products){
-        if(product.id === 6){
-            div.innerHTML += `
-                <div class="card" data-id=${product.id}>
-                <img src="${product.image}" alt="" width="150px" height="150px">
-                <span>${product.name}</span>
-                <span>$${product.price}</span>
-                <button>Delete</button>
-                </div>`;
-            document.querySelector(".send").setAttribute("disabled", true);
-            let para = document.createElement("p");
-            para.innerHTML = "Has llegado al límite de productos, considera eliminar y refrescar"
-            document.querySelector(".form-container").appendChild(para);
-        }else {
-            div.innerHTML += `
-                <div class="card" data-id=${product.id}>
-                <img src="${product.image}" alt="" width="150px" height="150px">
-                <span>${product.name}</span>
-                <span>$${product.price}</span>
-                <button>Delete</button>
-                </div>`
-        }
+        div.innerHTML += `
+            <div class="card" data-id=${product.id}>
+            <img src="${product.image}" alt="" width="150px" height="150px">
+            <span>${product.name}</span>
+            <span>$${product.price}</span>
+            <button>Delete</button>
+            </div>`;
     }
 }
 
