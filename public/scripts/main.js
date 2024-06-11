@@ -24,8 +24,11 @@ function renderProducts(products){
                 <span>${product.name}</span>
                 <span>${product.price}</span>
                 <button>Delete</button>
-                </div>`
+                </div>`;
             document.querySelector(".send").setAttribute("disabled", true);
+            let para = document.createElement("p");
+            para.innerHTML = "Has llegado al límite de productos, considera eliminar y refrescar"
+            document.querySelector(".form-container").appendChild(para);
         }else {
             div.innerHTML += `
                 <div class="card" data-id=${product.id}>

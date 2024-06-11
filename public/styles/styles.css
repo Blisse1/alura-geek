@@ -1,7 +1,15 @@
+body {
+    font-family: "Roboto Slab", serif;
+}
 header {
+    font-weight: 500;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
-    border: 1px solid red;
+    align-items: center;
+    height: 10vh;
+    color: white;
+    background-color: #5D04D9;
 }
 .container {
     display: grid;
@@ -12,8 +20,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 50vw;
-    height: 100vh;
-    border: 1px solid yellow;
+    height: 90vh;
 }
 .card {
     display: inline-block;
@@ -21,3 +28,62 @@ header {
     border: 1px solid black;
     height: 40vh;
 }
+form {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+}
+.form-container {
+    display: flex;
+    height: 65vh;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 55%;
+    font-size: 1.2rem;
+}
+.send {
+   background-color: #03318C;
+   border: none;
+   color: white;
+   height: 10vh;
+}
+label,
+input {
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+input {
+    border: 3px solid #03318C;
+}
+.send {
+   width: 30%; 
+   align-self: flex-start;
+}
+div > h2 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+footer {
+    height: 20vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #5D04D9;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 500;
+}
+
+@media (max-width: 770px) {
+    .container {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+

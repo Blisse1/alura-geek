@@ -5,6 +5,9 @@
         <title>Products CRUD</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles/styles.css">
         <link rel="stylesheet" href="./styles/reset.css">
         <script src="scripts/main.js" defer></script>
@@ -17,15 +20,23 @@
             <div class="products">
             </div>
             <form>
-                <label for="name">Add a name: </label>
-                <input type="text" id="name">
-                <label for="name">Add a price: </label>
-                <input type="text" id="price">
-                <label for="name">Add an image: </label>
-                <input type="text" id="image">
-                <button type="submit">Send</button>
+                <div class="form-container">
+                    <h2>Add a product</h2>
+                    <label for="name">Add a name: </label>
+                    <input type="text" id="name" placeholder="Add here your name" required>
+                    <label for="name">Add a price: </label>
+                    <input type="number" id="price" placeholder="Add here your price" required>
+                    <label for="name">Add an image: </label>
+                    <input type="text" id="image" placeholder="Add here your image" required>
+                    <button type="submit" class="send">Send</button>
+                </div>
             </form>
         </div>
+        <footer>
+            <span>AluraGeek</span>
+            <span>Desarrollado por Bliss</span>
+            <span>ALURA LATAM - 2024</span>
+        </footer>
     </body>
 </html>
 
