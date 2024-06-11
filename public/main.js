@@ -20,9 +20,9 @@ function renderProducts(products){
         if(product.id === 6){
             div.innerHTML += `
                 <div class="card" data-id=${product.id}>
-                <img src="${product.image}" alt="" width="100px" height="100px">
+                <img src="${product.image}" alt="" width="150px" height="150px">
                 <span>${product.name}</span>
-                <span>${product.price}</span>
+                <span>$${product.price}</span>
                 <button>Delete</button>
                 </div>`;
             document.querySelector(".send").setAttribute("disabled", true);
@@ -32,9 +32,9 @@ function renderProducts(products){
         }else {
             div.innerHTML += `
                 <div class="card" data-id=${product.id}>
-                <img src="${product.image}" alt="" width="100px" height="100px">
+                <img src="${product.image}" alt="" width="150px" height="150px">
                 <span>${product.name}</span>
-                <span>${product.price}</span>
+                <span>$${product.price}</span>
                 <button>Delete</button>
                 </div>`
         }
