@@ -1,4 +1,4 @@
-# alura-geek-s
+# Alura Geek
 
 To install dependencies:
 
